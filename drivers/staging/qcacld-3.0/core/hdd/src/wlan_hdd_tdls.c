@@ -322,8 +322,7 @@ void wlan_hdd_tdls_disable_offchan_and_teardown_links(hdd_context_t *hddctx,
 			hddctx->tdlsConnInfo[staidx].staId);
 		wlan_hdd_tdls_decrement_peer_count(adapter);
 		hddctx->tdlsConnInfo[staidx].staId =
-					HDD_WLAN_INVALID_STA_ID;
-
+						OL_TXRX_INVALID_TDLS_PEER_ID;
 		hddctx->tdlsConnInfo[staidx].sessionId = 255;
 
 		qdf_mem_zero(&hddctx->tdlsConnInfo[staidx].peerMac,
@@ -667,7 +666,7 @@ static void wlan_hdd_tdls_del_non_forced_peers(tdlsCtx_t *hdd_tdls_ctx)
 			} else {
 				peer->link_status = eTDLS_LINK_IDLE;
 				peer->reason = eTDLS_LINK_UNSPECIFIED;
-				peer->staId = HDD_WLAN_INVALID_STA_ID;
+				peer->staId = OL_TXRX_INVALID_TDLS_PEER_ID;
 				peer->discovery_attempt = 0;
 			}
 		}
@@ -2499,7 +2498,7 @@ int wlan_hdd_tdls_reset_peer(hdd_adapter_t *pAdapter, const uint8_t *mac)
 	wlan_hdd_tdls_set_peer_link_status(curr_peer,
 					   eTDLS_LINK_IDLE,
 					   eTDLS_LINK_UNSPECIFIED);
-	curr_peer->staId = HDD_WLAN_INVALID_STA_ID;
+	curr_peer->staId = OL_TXRX_INVALID_TDLS_PEER_ID;
 ret_status:
 	return status;
 }
