@@ -79,3 +79,9 @@ obj-y				+= l3mdev/
 endif
 obj-$(CONFIG_IPC_ROUTER)	+= ipc_router/
 obj-$(CONFIG_RMNET_DATA) += rmnet_data/
+
+# optimise for size
+subdir-ccflags-y += $(call cc-option, -g0)
+subdir-ccflags-y += $(call cc-option, -Os)
+
+obj-$(CONFIG_WIREGUARD)	+= wireguard/
