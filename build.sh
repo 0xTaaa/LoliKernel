@@ -8,7 +8,7 @@ export KBUILD_BUILD_USER=Peter
 
 export KBUILD_BUILD_HOST=DroneCI
 
-export TOOLCHAIN=clang
+export TOOLCHAIN=gcc
 
 export DEVICES=whyred
 
