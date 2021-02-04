@@ -27,20 +27,6 @@ do
 	build ${i} -newcam
 done
 
-send_msg "Start building OC version..."
-
-git apply oc.patch
-
-for i in ${DEVICES//,/ }
-do
-	if [ $i == "whyred" ]
-	then
-		build ${i} -oldcam -overclock
-
-		build ${i} -newcam -overclock
-	fi
-done
-
 END=$(date +"%s")
 
 DIFF=$(( END - START ))
