@@ -2,11 +2,11 @@
 
 export KERNELNAME="LoliKernel"
 
-export LOCALVERSION=1.2
+export LOCALVERSION=1.3
 
-export KBUILD_BUILD_USER=Peter
+export KBUILD_BUILD_USER=Prooholic
 
-export KBUILD_BUILD_HOST=DroneCI
+export KBUILD_BUILD_HOST=LoliServer
 
 export TOOLCHAIN=clang
 
