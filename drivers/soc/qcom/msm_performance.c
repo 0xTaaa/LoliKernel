@@ -31,7 +31,7 @@ struct events {
 };
 static struct events events_group;
 static struct task_struct *events_notify_thread;
-static int touchboost = 0;
+static int touchboost = 1;
 
 /*******************************sysfs start************************************/
 static int set_touchboost(const char *buf, const struct kernel_param *kp)
