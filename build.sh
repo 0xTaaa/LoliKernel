@@ -22,9 +22,9 @@ START=$(date +"%s")
 
 for i in ${DEVICES//,/ }
 do
-	build ${i} -oldcam
+	build ${i} -oldcam -OC
 
-	build ${i} -newcam
+	build ${i} -newcam -OC
 done
 
 END=$(date +"%s")
